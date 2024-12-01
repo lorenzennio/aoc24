@@ -4,7 +4,7 @@ def solution(data):
     pass
 
 if __name__=='__main__':
-    with open('input-test.txt', 'r') as f:
+    with open('test.txt', 'r') as f:
         input_test = f.read()
 
     with open('input.txt', 'r') as f:
