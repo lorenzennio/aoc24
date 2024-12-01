@@ -1,17 +1,21 @@
 import numpy as np
+import argparse
 
-def solution(data):
+def solution1(data):
+    pass
+
+def solution2(data):
     pass
 
 if __name__=='__main__':
-    with open('test.txt', 'r') as f:
-        input_test = np.loadtxt(f)
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-t', default=False, action=argparse.BooleanOptionalAction)
+    args = parser.parse_args()
 
-    with open('input.txt', 'r') as f:
+    file = 'test.txt' if args.t else 'input.txt'
+
+    with open(file, 'r') as f:
         input = np.loadtxt(f)
 
-    data = input if input else input_test
-
-    result = solution(data)
-
-    print(result)
+    print(solution1(input))
+    print(solution2(input))
